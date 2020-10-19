@@ -1,0 +1,7 @@
+
+{
+  "/latest?base=EUR": {
+    "target": "https://api.exchangeratesapi.io",
+    "secure": false
+  }
+}
