@@ -1,14 +1,13 @@
 <div class="container">
-<ngb-carousel #carousel [interval]="2000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
+<ngb-carousel class="test" #carousel [interval]="2000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
   <ng-template ngbSlide *ngFor="let currency of currencyList">
     <div class="carousel-caption">
         <h3> 1 {{currency.base}} = {{currency.rate | async}} {{currency.to}} </h3>
     </div>
 
       <div class="picsum-img-wrapper">
-        <img [src]="currency.pic" width="400px" length="600">
+        <img class="slider-img" [src]="currency.pic">
       </div>
-
   </ng-template>
 </ngb-carousel>
 </div>

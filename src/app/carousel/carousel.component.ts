@@ -1,6 +1,6 @@
 import {Component, ViewChild, OnInit} from '@angular/core';
 import {NgbCarousel, NgbSlideEvent, NgbSlideEventSource} from '@ng-bootstrap/ng-bootstrap';
-import {CarouselService} from "./carousel.service";
+import {CarouselService} from "./services/carousel.service";
 import {ExchangeRate} from "../models/exchangeRate";
 
 

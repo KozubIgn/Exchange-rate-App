@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.carousel-item {
+  position: relative;
+  display: none;
+  float: left;
+  height: 50vh !important;
+  margin-right: -100%;
+  backface-visibility: hidden;
+  transition: transform .6s ease-in-out;
+}
+
+.slider-img {
+  width: 100vw;
+}
