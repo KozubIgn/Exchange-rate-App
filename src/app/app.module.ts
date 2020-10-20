@@ -8,12 +8,15 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CarouselComponent } from './carousel/carousel.component';
 import {NgbCarousel, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from "@angular/forms";
+import { ChartComponent } from './chart/chart.component';
+import {GoogleChartsModule} from "angular-google-charts";
 
 @NgModule({
   declarations: [
     AppComponent,
     CurrencyListComponent,
-    CarouselComponent
+    CarouselComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +24,7 @@ import {FormsModule} from "@angular/forms";
     CarouselModule,
     NgbModule,
     FormsModule,
-
+    GoogleChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
