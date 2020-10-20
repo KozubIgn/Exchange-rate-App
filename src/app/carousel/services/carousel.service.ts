@@ -2,8 +2,8 @@ import {Injectable} from '@angular/core';
 import {Observable, Subject, timer} from "rxjs";
 import {concatMap, map} from "rxjs/operators";
 import {HttpClient} from "@angular/common/http";
-import {ExchangeRate} from "../models/exchangeRate";
-import {ApiService} from "../services/api.service";
+import {ExchangeRate} from "../../models/exchangeRate";
+import {ApiService} from "../../services/api.service";
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +19,7 @@ export class CarouselService {
   exchangeRateList: ExchangeRate[] = [
     {base: 'EUR', to: 'GBP', pic: '../../assets/photo/couple.jpg', rate: new Observable()},
     {base: 'USD', to: 'GBP', pic: '../../assets/photo/dog.jpg', rate: new Observable()},
-    {base: 'USD', to: 'EUR', pic: '../../assets/photo/rabbit.jpg', rate: new Observable()}
+    {base: 'GBP', to: 'EUR', pic: '../../assets/photo/rabbit.jpg', rate: new Observable()}
   ]
 
   refreshRate(): void {
