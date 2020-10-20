@@ -1,5 +1,5 @@
 export interface ChartDataPart {
-  date: string;
+  name: string;
   rateValue: number;
 
 }

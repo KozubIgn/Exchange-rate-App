@@ -1,4 +1,4 @@
-import {ChartDataPart} from "./dataPart";
+import {ChartDataPart} from "./chartDataPart";
 
 export interface Result {
    name: string;
