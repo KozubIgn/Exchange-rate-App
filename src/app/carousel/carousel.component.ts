@@ -1,10 +1,15 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component, ViewChild, OnInit} from '@angular/core';
 import {NgbCarousel, NgbSlideEvent, NgbSlideEventSource} from '@ng-bootstrap/ng-bootstrap';
+import {CarouselService} from "./carousel.service";
+import {ExchangeRate} from "../models/exchangeRate";
 
 
 @Component({selector: 'app-carousel-component', templateUrl: './carousel.component.html'})
-export class CarouselComponent {
-  images = [62, 83, 466, 965].map((n) => `https://picsum.photos/id/${n}/900/500`);
+
+export class CarouselComponent implements OnInit {
+
+  constructor(private carouselService: CarouselService) {
+  }
 
   paused = false;
   unpauseOnArrow = false;
@@ -12,6 +17,14 @@ export class CarouselComponent {
   pauseOnHover = true;
 
   @ViewChild('carousel', {static: true}) carousel: NgbCarousel;
+
+  currencyList: ExchangeRate[];
+
+  ngOnInit() {
+    this.carouselService.refreshRate();
+    this.currencyList = this.carouselService.getExchangeList();
+    console.log(this.currencyList);
+  }
 
   togglePaused() {
     if (this.paused) {

@@ -1,14 +1,14 @@
 <div class="container">
 <ngb-carousel #carousel [interval]="2000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
-  <ng-template ngbSlide *ngFor="let img of images; index as i">
+  <ng-template ngbSlide *ngFor="let currency of currencyList">
     <div class="carousel-caption">
-      <app-currency-list></app-currency-list>
+        <h3> 1 {{currency.base}} = {{currency.rate | async}} {{currency.to}} </h3>
     </div>
-    <a href="https://www.google.fr/?q=Number+{{i+1}}" target="_blank" rel="nofollow noopener noreferrer">
+
       <div class="picsum-img-wrapper">
-        <img [src]="img" alt="My image {{i + 1}} description">
+        <img [src]="currency.pic" width="400px" length="600">
       </div>
-    </a>
+
   </ng-template>
 </ngb-carousel>
 </div>
