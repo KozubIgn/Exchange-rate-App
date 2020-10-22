@@ -1,5 +1,8 @@
-import {ExchangeRate} from "./exchangeRate";
 
 export interface DataChart {
-  data: ExchangeRate[];
+  base: string,
+  rates: number,
+  start_at: string,
+  end_at: string
+
 }
