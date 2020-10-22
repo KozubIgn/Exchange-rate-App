@@ -23,7 +23,6 @@ export class CarouselComponent implements OnInit {
   ngOnInit() {
     this.carouselService.refreshRate();
     this.currencyList = this.carouselService.getExchangeList();
-    console.log(this.currencyList);
   }
 
   togglePaused() {
