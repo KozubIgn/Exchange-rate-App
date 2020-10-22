@@ -16,7 +16,7 @@ export class ChartComponent implements OnInit {
   title = `Currency: ${this.currency.base} to ${this.currency.to}`;
   type = 'LineChart';
   data = [];
-  columnNames = ['Data', `${this.currency.to}`];
+  columnNames = ['Data', 'values'];
   options = {colors: ['#e0440e',], is3D: true};
   width = 1068;
   height = 800;
